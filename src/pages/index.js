@@ -3,6 +3,7 @@ import Banner from "../components/banner/Banner"
 import SimpleHero from "../components/hero/SimpleHero"
 import Layout from "../components/layout/Layout"
 import {Link} from 'gatsby'
+import About from "../components/about/About"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <Link to='/tours' className='btn-white'>Letss go!</Link>
         </Banner>
       </SimpleHero>
+      <About/>
     </Layout>
   )
 }
