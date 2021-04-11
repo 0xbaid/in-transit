@@ -4,6 +4,7 @@ import SimpleHero from "../components/hero/SimpleHero"
 import Layout from "../components/layout/Layout"
 import {Link} from 'gatsby'
 import About from "../components/about/About"
+import Services from "../components/services/Services"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         </Banner>
       </SimpleHero>
       <About/>
+      <Services/>
     </Layout>
   )
 }
