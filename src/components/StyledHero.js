@@ -3,7 +3,6 @@ import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 
 const StyledHero = ({ className, home, img, children }) => {
-  console.log(home)
   return (
     <BackgroundImage className={className} fluid={img} home={home}>
       {children}

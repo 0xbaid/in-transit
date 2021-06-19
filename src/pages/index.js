@@ -11,7 +11,6 @@ import { getImage } from "gatsby-plugin-image"
 
 export default function Home({ data }) {
   const aboutImage = getImage(data.aboutImage)
-  console.log(data)
   return (
     <Layout>
       <StyledHero home="true" img={data.heroImage.childImageSharp.fluid}>
@@ -31,7 +30,7 @@ export default function Home({ data }) {
 }
 
 export const pageQuery = graphql`
-  query Image {
+  query IndexImage {
     aboutImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
       childImageSharp {
         gatsbyImageData
