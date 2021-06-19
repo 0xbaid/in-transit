@@ -5,6 +5,26 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [`gatsby-plugin-styled-components`]
+  siteMetadata: {
+    title: "In-Transit",
+    description: "Travel the world and explore beautiful places",
+    author: "Obddd",
+  },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-transformer-remark`,
+  ],
+  flags: {
+    DEV_SSR: false,
+  },
 }
