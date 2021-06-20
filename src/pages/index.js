@@ -2,7 +2,7 @@ import React from "react"
 import Banner from "../components/banner/Banner"
 import StyledHero from "../components/StyledHero"
 import Layout from "../components/layout/Layout"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import About from "../components/about/About"
 import Services from "../components/services/Services"
 
@@ -18,9 +18,9 @@ export default function Home({ data }) {
           title="lets travel the world"
           info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perferendis impedit tenetur nisi minima aperiam sint, ipsum sit debitis culpa vel hic atque exercitationem voluptatem amet, accusantium quos distinctio! Quis."
         >
-          <Link to="/tours" className="btn-white">
+          <AniLink paintDrip hex="#3fd0d4" to="/tours" className="btn-white">
             Letss go!
-          </Link>
+          </AniLink>
         </Banner>
       </StyledHero>
       <About image={aboutImage} />

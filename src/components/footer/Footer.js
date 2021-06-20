@@ -1,6 +1,6 @@
 import React from "react"
 import * as styles from "./footer.module.css"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import links from "../../constants/links"
 import socialLinks from "../../constants/social-links"
 
@@ -9,9 +9,9 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.links}>
         {links.map((item, i) => (
-          <Link key={i} to={item.path}>
+          <AniLink paintDrip hex="#3fd0d4" key={i} to={item.path}>
             {item.text}
-          </Link>
+          </AniLink>
         ))}
       </div>
       <div className={styles.icons}>
@@ -21,7 +21,10 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <div className={styles.copyright}>copyrights &copy; in transit company {new Date().getFullYear()} all rights reserved</div>
+      <div className={styles.copyright}>
+        copyrights &copy; in transit company {new Date().getFullYear()} all
+        rights reserved
+      </div>
     </footer>
   )
 }

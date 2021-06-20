@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import * as styles from "./navbar.module.css"
-import { Link } from "gatsby"
+// import { Link } from "gatsby" replaced with anilink for transition
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import links from "../../constants/links"
 import socialLinks from "../../constants/social-links"
 import logo from "../../images/logo.svg"
@@ -11,8 +12,6 @@ const Navbar = () => {
   const toggleNav = () => {
     setIsOpen(isOpen => !isOpen)
   }
-  // console.log(styles)
-  console.log(isOpen)
   return (
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
@@ -31,7 +30,9 @@ const Navbar = () => {
         >
           {links.map((item, i) => (
             <li key={i}>
-              <Link to={item.path}>{item.text}</Link>
+              <AniLink paintDrip hex="#3fd0d4" to={item.path}>
+                {item.text}
+              </AniLink>
             </li>
           ))}
         </ul>

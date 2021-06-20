@@ -2,16 +2,16 @@ import React from "react"
 import Banner from "../components/banner/Banner"
 import Layout from "../components/layout/Layout"
 import * as styles from "../css/error.module.css"
-import {Link} from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const error = () => {
   return (
     <Layout>
       <header className={styles.error}>
         <Banner title="the page doesn't exists">
-          <Link to="/" className="btn-white">
+          <AniLink paintDrip hex="#3fd0d4" to="/" className="btn-white">
             go to home
-          </Link>
+          </AniLink>
         </Banner>
       </header>
     </Layout>

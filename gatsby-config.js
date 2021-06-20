@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-transformer-remark`,
+    `gatsby-plugin-transition-link`, //for transition in page
   ],
   flags: {
     DEV_SSR: false,
