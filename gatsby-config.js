@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "In-Transit",
@@ -30,6 +34,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-plugin-transition-link`, //for transition in page
+    `gatsby-plugin-playground`,
   ],
   flags: {
     DEV_SSR: false,
