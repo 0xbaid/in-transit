@@ -8,6 +8,7 @@ const Contact = () => {
       <Title title="contact" subtitle="us" />
       <div className={styles.center}>
         <form className={styles.form}>
+          {/* //add formspree url */}
           <div>
             <label htmlFor="name">Name</label>
             <input
